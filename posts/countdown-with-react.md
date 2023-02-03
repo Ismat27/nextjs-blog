@@ -122,7 +122,3 @@ flex-wrap: wrap;
 
 export default Countdown
 ```
-
-```html
-<p>all is well</p>
-```
