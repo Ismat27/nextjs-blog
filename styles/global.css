@@ -25,3 +25,10 @@ img {
   max-width: 100%;
   display: block;
 }
+
+pre {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  overflow: scroll;
+}
