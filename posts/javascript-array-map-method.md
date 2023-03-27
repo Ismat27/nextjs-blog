@@ -33,7 +33,7 @@ const array_2 = array_1.map(x => x * 2)
 
 There are different approaches to using the `map` method but basically the method takes in a compulsory callback function, `callbackfn` as its first argument and an optional `thisValue` to be used as the value of `this` when executing the `callbackFn`. It calls this callback function on every element of an existing array to produce corresponding element of a new array. The `map` makes available for the callback function three arguments on each call/iteration and hence the callback function can take up to three arguments as listed out below:
 
-- `currentValue`: This is the current element value of the existing array during each iteraion
+- `currentValue`: This is the current element value of the existing array during each iteration
 - `currentIndex`: This is the index of current element of the existing array during each iteration
 - `array`: The existing array
 
@@ -75,14 +75,14 @@ const records = [
 ```
 
 ```js
-function getNames(record) {
+function getFullNames(record) {
     return `${record.firstName} ${record.lastName}`
 }
 ```
 
 ```js
-// This returns array of fullnames 
-const fullNames = records.map(getNames)
+// This returns an array of fullnames of individual record item
+const fullNames = records.map(getFullNames)
 ```
 
 The method can also take in an `inline function`
