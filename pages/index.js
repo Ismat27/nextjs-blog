@@ -11,6 +11,7 @@ import Col from 'react-bootstrap/Col';
 import Hero from '../components/Hero';
 import Header from '../components/Header';
 import Projects from '../components/Projects';
+import About from '../components/About';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -31,7 +32,9 @@ export default function Home({ allPostsData }) {
         <Header />
         <Hero />
       </div>
-      <section className='posts'>
+      <About />
+      <Projects />
+      {/* <section className='posts'>
         <Container>
           <h2 className={utilStyles.headingLg}>Blog</h2>
           <Row>
@@ -50,8 +53,7 @@ export default function Home({ allPostsData }) {
             ))}
           </Row>
         </Container>
-      </section>
-      <Projects />
+      </section> */}
     </Layout>
   );
 }
