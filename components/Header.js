@@ -1,17 +1,19 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Container } from "react-bootstrap"
+import styled from "styled-components"
+import Hamburger from "./Hamburger"
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false)
   return (
-    <header>
+    <Wrapper>
         <nav>
             <Container className="nav-container">
                 <div className="menu-box">
                     <h1 className="logo">smart<span>Dev</span></h1>
                     <div onClick={() => setMenuOpen(!menuOpen)} className="menu">
-                        <button>menu</button>
+                        <Hamburger isOpen={menuOpen} />
                     </div>
                 </div>
                 <div className={`${menuOpen ? "nav-list-box open" : "nav-list-box"}`}>
@@ -35,8 +37,19 @@ const Header = () => {
                 </div>
             </Container>
         </nav>
-    </header>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.header`
+padding-top: 1rem;
+a, .logo {
+    font-family: Lato,Trebuchet MS,sans-serif;
+}
+a {
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+`
 
 export default Header
