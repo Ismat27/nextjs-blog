@@ -1,7 +1,8 @@
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import { Container } from 'react-bootstrap'
 import styled from 'styled-components'
+import { toast } from 'react-toastify'
 
 const Contact = () => {
     const [name, setName] = useState('')
@@ -9,6 +10,7 @@ const Contact = () => {
     const [message, setMessage] = useState('')
 
     const [sending, setSending] = useState(false)
+    const sendingToastId = useRef(null)
 
     const submitForm = (event) => {
         event.preventDefault()
@@ -16,12 +18,33 @@ const Contact = () => {
             return
         }
         setSending(true)
+        sendingToastId.current =  toast.info('Sending message', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
         axios.post('/api/sendmail', {name, email, message})
         .then(response => {
             setName('')
             setEmail('')
             setMessage('')
-            alert(response.data.message)
+            toast.dismiss(sendingToastId.current)
+            toast.success('Message delivered successfully', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+            console.log(response.data);
         })
         .catch(error => {
             console.log(error);
