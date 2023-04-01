@@ -40,6 +40,10 @@ svg {
     color: white;
     font-size: 1.5rem;
 }
+a:hover {
+    transform: scale(1.2);
+    opacity: .8;
+}
 @media screen and (min-width: 768px) {
     article {
         flex-direction: row;
