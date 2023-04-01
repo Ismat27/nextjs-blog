@@ -1,9 +1,21 @@
+import { useRef } from 'react'
 import styled from 'styled-components'
 
-const Hamburger = ({isOpen}) => {
+const Hamburger = ({isOpen, setIsOpen}) => {
+  const ref = useRef(null)
+  const toggle = () => {
+    if (!isOpen) {
+      ref.current.className = 'active'
+    }
+    else {
+      ref.current.className = 'not-active'
+    }
+    setIsOpen(!isOpen)
+  }
+
   return (
-    <Wrapper>
-        <div className={`${isOpen? 'active' : 'not-active'}`}>
+    <Wrapper className='menu' onClick={toggle}>
+        <div ref={ref} className={``}>
             <span></span>
             <span></span>
             <span></span>
