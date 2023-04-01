@@ -27,12 +27,10 @@ export default async function handler(req, res) {
     subject: `New message from ${name} ${email}`,
     text: mailMsg,
   };
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-        res.status(422).json({message: 'unable to deliver mail'})
-    }
-    else {
-        res.status(200).json({message: 'email delivered successfully'})
-    }
-  })
+  try {
+    await transporter.sendMail(mailOptions)
+    return res.status(200).json({message: 'email delivered successfully'})
+  } catch (error) {
+    return res.status(200).json({message: 'unable to deliver mail'})
+  }
 }
