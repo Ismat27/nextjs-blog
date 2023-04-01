@@ -12,9 +12,7 @@ const Header = () => {
             <Container className="nav-container">
                 <div className="menu-box">
                     <h1 className="logo">smart<span>Dev</span></h1>
-                    <div onClick={() => setMenuOpen(!menuOpen)} className="menu">
-                        <Hamburger isOpen={menuOpen} />
-                    </div>
+                    <Hamburger isOpen={menuOpen} setIsOpen={setMenuOpen} />
                 </div>
                 <div className={`${menuOpen ? "nav-list-box open" : "nav-list-box"}`}>
                     <ul className="nav-list">
