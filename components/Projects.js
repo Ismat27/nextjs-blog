@@ -5,7 +5,7 @@ const Tools = ({tools}) => {
     return (
         <div className='project-tools'>
             {
-                tools.map((tool) => <span key={tool}>{tool}</span>)
+                tools.map((tool) => <span className='project-tool' key={tool}>{tool}</span>)
             }
         </div>
     )
@@ -24,7 +24,7 @@ const Projects = () => {
             {
                 projects_data.map((item, index) => {
                     return ( 
-                        <article className='' key={index}>
+                        <article className='project' key={index}>
                             <Card className='h-100 project-card' border='light'>
                                 <Card.Img alt={item.title} src={item.image}/>
                                 <Card.Body>
@@ -33,7 +33,7 @@ const Projects = () => {
                                     <Tools tools={item.tools} />
                                 </Card.Body>
                                 <Card.Footer>
-                                    <Card.Text>Read more</Card.Text>
+                                    <Card.Text className='project-link' href={item.link} as='a'>View</Card.Text>
                                 </Card.Footer>
                             </Card>
                         </article>
