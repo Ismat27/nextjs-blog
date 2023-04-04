@@ -10,6 +10,7 @@ body {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 ul {
   list-style: none;
@@ -79,6 +80,21 @@ img {
 }
 .hero-section {
   color: #fff;
+}
+.my-name {
+  text-decoration: underline;
+  text-decoration-color: yellowgreen;
+}
+.cta-btn {
+  background-color: transparent;
+  padding: .5rem 1rem;
+  border: 2px solid yellowgreen;
+  border-radius: 1rem;
+  font-size: large;
+  color: #ffffff;
+}
+.cta-btn a:focus {
+  color: inherit;
 }
 .posts {
   background-color: #EDF7FA;
