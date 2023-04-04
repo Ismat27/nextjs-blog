@@ -1,4 +1,4 @@
-import { Container, Card, Col } from 'react-bootstrap'
+import { Container, Card } from 'react-bootstrap'
 import {projects_data} from '../projects_data'
 
 const Tools = ({tools}) => {
@@ -13,7 +13,7 @@ const Tools = ({tools}) => {
 
 const Projects = () => {
   return (
-    <section className='projects-section py-2'>
+    <section id='projects' className='projects-section py-2'>
         <Container>
             <h2 className='mb-5'>
                 Some of the projects I have been working on

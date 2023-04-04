@@ -53,7 +53,7 @@ const Contact = () => {
     }
 
   return (
-    <Wrapper>
+    <Wrapper id='contact'>
         <div>
             <Container className='section-container'>
                 <div className='content'>
