@@ -8,11 +8,18 @@ const Hero = () => {
         <Container>
             <Row>
                 <Col lg={6}>
-                    <h1 className={utilStyles.heading2Xl}>Ismail Adegbite</h1>
-                    <p>My name is Ismail Adegbite, a fullstack engineer</p>
+                    <h1 className={utilStyles.heading2Xl}>
+                        Nice to meet you! <br />
+                        I'm <span className='my-name'>Ismail Adegbite</span>
+                    </h1>
                     <p>
-                    I am a full-stack developer with a passion for creating dynamic and user-friendly web applications. With profound knowledge of both front-end and back-end tecnologies, I excel at crafting innovative solutions that drive engagement and solve complex business problems. From ideation to deployment, I work collaboratively with my clients to deliver high-quality products that exceed expectations and drive results.
+                    I am a full-stack developer with a passion for creating dynamic and user-friendly web applications. With profound knowledge of both front-end and back-end tecnologies, I excel at crafting innovative solutions that drive engagement and solve complex business problems.
                     </p>
+                    <div>
+                        <button className='cta-btn hire-me'>
+                            <a href='mailto:adegbiteismail27@gmail.com'>Contact me</a>
+                        </button>
+                    </div>
                 </Col>
                 <Col>
                     <Image
