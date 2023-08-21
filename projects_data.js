@@ -53,4 +53,19 @@ const projects_data = [
   },
 ];
 
-export { projects_data };
+const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "TailwindCss",
+  "React.Js",
+  "Next.Js",
+  "Node",
+  "Express.js",
+  "Mongoose",
+  "Python",
+  "DRF",
+];
+
+export { projects_data, skills };

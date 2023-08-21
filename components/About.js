@@ -1,59 +1,51 @@
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { VscTools } from "react-icons/vsc";
-const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "TailwindCss",
-  "React.Js",
-  "Next.Js",
-  "Node",
-  "Express.js",
-  "Mongoose",
-  "Python",
-  "DRF",
-];
+import { skills } from "../projects_data";
+import { AOS } from "./AOS";
 
 const About = () => {
   return (
     <Wrapper>
       <Container className="section-container">
         <div className="content-box">
-          <article>
-            <h2>My humble self</h2>
-            <p>
-              I am growth oriented fellow who love to mingle and use web
-              technologies to solve diverse business problems
-            </p>
-            <p>
-              I have the privilege to have been mentored and worked with
-              experienced developers through which I have been evolving as a
-              developer that possesses the required skill set to build standard
-              web applications
-            </p>
-            <p>
-              From ideation to production, I enjoy working collaboratively with
-              my team members to deliver a high quality products that exceed
-              expectations and drive results.
-            </p>
-          </article>
-          <article>
-            <h3>My Skills</h3>
-            <p>Here are the technologies I have been working with</p>
-            <div className="skills-container">
-              <ul className="skills">
-                {skills.map((skill) => {
-                  return (
-                    <li key={skill} className="skill">
-                      <VscTools /> <strong>{skill}</strong>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </article>
+          <AOS>
+            <article>
+              <h2>My humble self</h2>
+              <p>
+                I am growth oriented fellow who love to mingle and use web
+                technologies to solve diverse business problems
+              </p>
+              <p>
+                I have the privilege to have been mentored and worked with
+                experienced developers through which I have been evolving as a
+                developer that possesses the required skill set to build
+                standard web applications
+              </p>
+              <p>
+                From ideation to production, I enjoy working collaboratively
+                with my team members to deliver a high quality products that
+                exceed expectations and drive results.
+              </p>
+            </article>
+          </AOS>
+          <AOS xStart={100} delay={0.2}>
+            <article>
+              <h3>My Skills</h3>
+              <p>Here are the technologies I have been working with</p>
+              <div className="skills-container">
+                <ul className="skills">
+                  {skills.map((skill) => {
+                    return (
+                      <li key={skill} className="skill">
+                        <VscTools /> <strong>{skill}</strong>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </article>
+          </AOS>
         </div>
       </Container>
     </Wrapper>
