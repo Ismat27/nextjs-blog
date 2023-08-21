@@ -1,21 +1,20 @@
-import { getSortedPostsData } from '../lib/posts';
-import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
-import Hero from '../components/Hero';
-import Header from '../components/Header';
-import Projects from '../components/Projects';
-import About from '../components/About';
-import Contact from '../components/Contact';
-import { useEffect, useState } from 'react';
-import Footer from '../components/Footer';
+import { getSortedPostsData } from "../lib/posts";
+import Head from "next/head";
+import Layout, { siteTitle } from "../components/layout";
+import Hero from "../components/Hero";
+import Header from "../components/Header";
+import Projects from "../components/Projects";
+import About from "../components/About";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
+  const allPostsData = getSortedPostsData();
   return {
     props: {
-      allPostsData
-    }
-  }
+      allPostsData,
+    },
+  };
 }
 
 export default function Home({ allPostsData }) {
@@ -24,7 +23,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div className='top-container'>
+      <div className="top-container">
         <Header />
         <Hero />
       </div>
