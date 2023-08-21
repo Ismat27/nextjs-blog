@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useState, useRef } from "react";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
@@ -8,10 +7,13 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
-  const closeMenu = () => {
+  const navScroll = (id) => {
     setMenuOpen(false);
+    const section = document.getElementById(id);
+    section.scrollIntoView({ behavior: "smooth" });
     menuRef.current.className = "not-active";
   };
+
   const toggle = () => {
     if (!menuOpen) {
       menuRef.current.className = "active";
@@ -33,22 +35,17 @@ const Header = () => {
           <div className={`${menuOpen ? "nav-list-box open" : "nav-list-box"}`}>
             <ul className="nav-list">
               <li className="nav-list-item">
-                <Link
+                <span
                   className="nav-link"
-                  href={"/#projects"}
-                  onClick={closeMenu}
+                  onClick={() => navScroll("projects")}
                 >
                   works
-                </Link>
+                </span>
               </li>
               <li className="nav-list-item">
-                <Link
-                  className="nav-link"
-                  href={"/#contact"}
-                  onClick={closeMenu}
-                >
+                <span className="nav-link" onClick={() => navScroll("contact")}>
                   contact
-                </Link>
+                </span>
               </li>
             </ul>
           </div>
@@ -64,9 +61,11 @@ const Wrapper = styled.header`
   .logo {
     font-family: Lato, Trebuchet MS, sans-serif;
   }
-  a {
+  a,
+  .nav-link {
     font-size: 1rem;
     text-transform: capitalize;
+    cursor: pointer;
   }
   .nav-link:active,
   .nav-link:focus {

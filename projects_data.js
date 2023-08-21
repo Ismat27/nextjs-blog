@@ -13,7 +13,7 @@ const projects_data = [
     title: "Smart Farm Tools",
     intro:
       "A Platform for plants' diseases diagnosis and to connect farmers with agricultural experts for seemless consultancy services",
-    tools: ["React", "Styled-Compnennts"],
+    tools: ["React", "Styled-Components"],
     link: "https://smart-farm-tools.netlify.app/",
   },
   {
