@@ -10,6 +10,7 @@
     "babel-plugin-styled-components": "^2.0.7",
     "bootstrap": "^5.2.3",
     "date-fns": "^2.29.3",
+    "framer-motion": "^10.16.0",
     "gray-matter": "^4.0.3",
     "icons": "^1.0.0",
     "markdown-to-jsx": "^7.1.9",
