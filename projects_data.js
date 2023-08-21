@@ -48,7 +48,7 @@ const projects_data = [
     image: "/images/task-manager.png",
     title: "TODO",
     intro: "A minimal TODO app for listing and updating tasks to be completed",
-    tools: ["React", "TailwindCss", "TypeScrpt", "React-Toastify"],
+    tools: ["React", "TailwindCss", "TypeScript", "React-Toastify"],
     link: "https://task-manager-ismat.vercel.app/",
   },
 ];
