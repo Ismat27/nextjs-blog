@@ -18,7 +18,7 @@ export default function Layout({ children }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      {children}
+      <div>{children}</div>
     </div>
   );
 }
