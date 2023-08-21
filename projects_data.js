@@ -4,7 +4,7 @@ const projects_data = [
     image: "/images/seller-dashboard.png",
     title: "Seller Dashboard",
     intro: "Dashboard for tracking sales, stock and product delivery",
-    tools: ["React", "TailwindCss", "TypeScrpt"],
+    tools: ["React", "TailwindCss", "TypeScript"],
     link: "https://seller-dashboard-rust.vercel.app/",
   },
   {
